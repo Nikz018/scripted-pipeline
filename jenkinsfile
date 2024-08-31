@@ -1,31 +1,3 @@
-pipeline{
-  agent any 
-  stages {
-        stage ('Build') {
-			steps {
-				echo "Build Phase"
-		    }
-		}
-		stage ('Test') {
-		    steps{
-			     echo "Test Phase"
-			 }
-		}
-        stage ('Deploy') {
-              steps{
-			    echo "Deploy Phase"
-			}
-	    }
-        stage ('Deep DAST'){
-              steps{
-                            echo "DAST is 100% completed"
-                       }
-            }
-
-
-	}
-}
-
 node ('Built-In Node'){  
     def app
     stage('Cloning Git') {
